@@ -1,0 +1,10 @@
+header{
+    color: white;
+    overflow: hidden;
+}
+nav div{
+    padding: 0.5rem;
+}
+.linea{
+    text-decoration: line-through;
+}
