@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        nuovo:{
+        newTask:{
             text: '',
             done: false
         },
@@ -33,12 +33,10 @@ createApp({
   },
   methods:{
     push(){
-        let newElemento = document.getElementById('text').value;
-        console.log(newElemento)
-        let aggiungi = Object.assign({}, newElemento)
-        this.list.push(aggiungi);
-        this.nuovo.text = '';
-        document.getElementById('text').value = '';
+        if(newTask.text.length > 3){
+        this.list.push({...this.newTask});
+        }
+        this.newTask.text = '';
     },
     remove(index){
         this.list.splice(index, 1);

@@ -26,7 +26,7 @@
                           <label for="text" class="col-form-label">Text</label>
                         </div>
                         <div class="col">
-                          <input type="text" placeholder="nuovo" id="text">
+                          <input type="text" placeholder="nuovo" v-model="newTask.text" @keyup.enter="push()">
                         </div>
                         <div class="col">
                             <a href="#" @click="push()" class="btn btn-light"><i class="fa-solid fa-arrow-right-to-bracket"></i></i></a>
